@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>registration</title>
+</head>
+
+<body>
+<hr />
+<table>
+  <tr>
+    <td><a href="index.html">Home</a></td>
+    <td><a href="localdishes.html">Local Dishes</a></td>
+    <td><a href="historicalplaces.html">Historical Places</a></td>
+    <td><a href="usefullinks.html">Useful Links</a></td>
+    <td><a href="aboutme.html">About Me</a></td>
+    <td><a href="contactme.html">Contact Me</a></td>
+    <td><h2><a href="registration.html">Registration</a></h2></td>
+  </tr>
+</table>
+<hr/>
+<form  name="form1" method="post" action="RegMes.html">
+
+  <p>
+    <label for="name">Name:</label>
+    <input name="name" type="text"  />
+  </p>
+  <p>
+    <label for="surname">Surname:</label>
+    <input name="surname" type="text"  />
+  </p>
+  <p>
+   <label for="date">Date of Birth:</label>
+   <input name="date" type="date"  />
+  </p>
+  <p>
+    <label for="email">E-mail:</label>
+    <input name="email" type="text" />
+  </p>
+  <p>
+  <label for="password">Password:</label>
+  <input name="password" type="password" />
+  </p>
+  <p>
+  <label>Gender:</label>
+  <select name="jumpMenu">
+    <option>Male</option>
+    <option>Female</option>
+  </select>
+  </p>
+  <p>
+    <label>
+      Interest:<br /> </label>
+      <input type="checkbox" name="interest" value="spor"  />
+          Swim</p>
+  <p>
+    <input type="checkbox" name="interest" value="coding" id="interest_1" />
+      Code</p>
+  <p>
+      <input type="checkbox" name="interest" value="traking"  />
+      Traking</p>
+  <p>
+      <input type="checkbox" name="interest" value="reading"  />
+      Reading 
+  </p>
+  
+  
+<br />
+    <p>
+    <input type="submit" name="submit" value="Submit"/>
+    <input type="reset" name="reset" value="Reset" />
+  </p>
+</form>
+</body>
+</html>
