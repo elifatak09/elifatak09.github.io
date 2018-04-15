@@ -1,24 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
 <title>RegMes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" ; charset="utf-8">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body{
+	background-image:url(img/3.jpg);
+  	  background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+}
+.navbar-header{
+	padding-right: 10px;
+}
+h2{
+	background-color: rgba(100, 100, 100, 0.5);
+	color: #F9F5E9;
+	font-family: Tahoma, Geneva, sans-serif;
+	padding-left:10px;
+	
+}
+</style>
 </head>
 
 <body>
-  <table>
-    <tr>
-      <td><a href="home.html">Home</a></td>
-      <td><a href="localdishes.html">Local Dishes</a></td>
-      <td><a href="historicalplaces.html">Historical Places</a></td>
-      <td><a href="usefullinks.html">Useful Links</a></td>
-      <td><a href="aboutme.html">About Me</a></td>
-      <td><a href="contactme.html">Contact Me</a></td>
-      <td><h2><a href="registration.html">Registration</a></h2></td>
-    </tr>
-  </table>
+  <hr />
+ <div class="container-fluid">
+  <div class ="row">
+   <div class="col-lg-12">	
+ <!-- start collapsed navbar -->
+	  <div class="navbar-header navbar-inverse">
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mine" aria-expanded="false"
+                 style="color:#CCC">
+        Krakow</button>
+    		</div> <!-- /collapsed navbar -->
+    <nav class="navbar navbar-expand-lg navbar-inverse collapse navbar-collapse " id ="mine" style="opacity: 0.8;">
+ 
+    <ul class="nav navbar-nav">
+      <li ><a href="index.html">Home</a></li>
+      <li><a href="localdishes.html">Local Dishes</a></li>
+      <li><a href="historicalplaces.html">Historical Places</a></li>
+      <li><a href="usefullinks.html">Useful Links</a></li>
+      <li><a  href="aboutme.html">About Me</a></li>
+      <li class="active"><a  href="contactme.html">Contact Me</a></li>
+      <li><a  href="registration.html">Registration</a></li>
+     </ul>
+    <div class="navbar-header  navbar-right" >
+      <a  class="navbar-brand" href="index.html">Krakow </a>
+    </div>
+  
+  </nav>
+    </div>
+  </div>
+</div>
+
 <hr/>
-<img src="a.png" width="308" height="256" alt="image" />
-<p>Thanks for Registration!</p>
+<div class="container-fluid">
+  <div class ="row">
+   <div class="col-lg-12" style="text-align:center; opacity:0.8;">	
+<img src="img/a.png" class="img-rounded" width="308" height="256" alt="image" />
+</div>
+<div class="col-lg-12" >
+<span  style="text-align:center;">
+<h2>Thanks for Registration!</h2>
+</span>
+</div>
+</div>
+</div>
 </body>
 </html>

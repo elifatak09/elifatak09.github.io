@@ -1,52 +1,244 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>localdishes</title>
+<title>Local Dishes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" ; charset="utf-8">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body{
+	
+	background-image:url(img/20.jpg);
+	-moz-background-size: 100% 100%;           /* Firefox 3.6 */
+	-o-background-size: 100% 100%;           /* Opera 9.5 */
+	-webkit-background-size: 100% 100%;           /* Safari 3.0, Chrome */
+	background-size: 100% 100%;           /* w3c, Firefox 4.0, ie9  */
+}
+.div-with-bg{
+	background-image:url(img/3.jpg);
+ -moz-background-size: 100% 100%;           /* Firefox 3.6 */
+	-o-background-size: 100% 100%;           /* Opera 9.5 */
+	-webkit-background-size: 100% 100%;           /* Safari 3.0, Chrome */
+	background-size: 100% 100%;           /* w3c, Firefox 4.0, ie9  */
+}
+
+p{
+	background-color: rgba(67, 0, 0, 0.5);
+	color: #F9F5E9;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	
+}
+
+h3{
+	background-color: rgba(112, 16, 46, 0.5);
+	background-origin:border-box;
+
+	font-family: Tahoma, Geneva, sans-serif;
+    color: #F9F5E9;
+}
+.navbar-header{
+	padding-right: 10px;
+}
+</style>
+
 </head>
 
 <body>
+<div class="div-with-bg">
 <hr />
-<table>
-  <tr>
-    <td><a href="index.html">Home</a></td>
-    <td><h2><a href="localdishes.html">Local Dishes</a></h2></td>
-    <td><a href="historicalplaces.html">Historical Places</a></td>
-    <td><a href="usefullinks.html">Useful Links</a></td>
-    <td><a href="aboutme.html">About Me</a></td>
-    <td><a href="contactme.html">Contact Me</a></td>
-    <td><a href="registration.html">Registration</a></td>
-  </tr>
-</table>
-<hr/>
-<p>Here is the local dishes for Krakow</p>
-<h3><em>Bigos</em></h3>
-<img src="b.png" width="427" height="269" alt="img" />
-<p>Traditionally a winter dish, Bigos is a hearty stew made in large batches. Though there is no standard recipe, ingredients usually include lots of fresh and pickled cabbage, leftover meat parts and sausage, onion, mushrooms, garlic and whatever else is on hand. In fact, metaphorically Bigos translates to ‘big mess,’ ‘confusion’ or ‘trouble’ in Polish. Seasoned with peppercorns, bay leaves, caraway and the kitchen sink, the stew is left to gestate, sometimes underground, for a few days for full flavour infusion. A Polish restaurant or prospective wife can be fairly measured on the strength of their Bigos.</p>
-<br/>
-<h3><em>Gołąbki</em></h3>
-<img src="c.png" width="427" height="269" alt="img" />
-<p>
-Translating to ‘little pigeons,’ this favourite dish consists of boiled cabbage leaves stuffed with beef, onion and rice before being baked and served in a tomato or mushroom sauce. Polish legend claims King Kazimierz fed his army gołąbki before a battle outside Malbork against the Teutonic Order, and their unlikely subsequent victory has been attributed to the hearty meal ever since.
-</p>
-<h3><em>Pierogi</em></h3>
-<img src="pierogi.jpg" width="427" height="269" alt="pierogi" />
-<p>Pierogi arrived on Polish territories in the 13th century. The were probably imported from the Far East via eastern neighbors such as Kievian Rus (today's Ukraine) perhaps thanks to Hyacinth of Poland (a monk in a Kiev monastery who became patron saint of pierogi).  In the past, pierogi were more popular in the eastern borderlands of Old Poland than in the west. The first written pierogi recipes come from Compendium Ferculorum a book published in 1682. It was the first Polish cookbook of the renowned cook Stanisław Czerniecki. What was the stuffing for those ancient pierogi? No potatoes (which were unknown in the 17th century in Poland...) but chopped kidneys, veal fat, greens and nutmeg</p>
-<h3><em> Zapiekanka</em></h3>
-<img src="zapiekanka.jpg" width="427" height="269" alt="zapiekanka" />
-<p>A zapiekanka s an open-face sandwich made of half of a baguette or other long roll of bread, topped with sautéed white mushrooms, cheese and sometimes other ingredients, and toasted until the cheese melts. Served hot with ketchup, it is a popular street food in Poland. With its origin dating back to the 1970s, the zapiekanka is associated with the austere times of Poland's Communist regime, but it has enjoyed renewed demand in the 21st century, which has also brought a wider range of varieties.</p>
-<h3><em> Zupa(Soup)</em></h3>
- <img src="barszcz.jpg" width="213" height="192" alt="barszcz" />
- <img src="zurek.jpg" width="250" height="192" alt="zurek" />
-<img src="flaki.jpg" width="250" height="192" alt="flaki" />
-<p>Poland has three signature soups: barszcz, żurek and flaki. A nourishing beetroot soup, <strong>barszcz </strong>may be served with potatoes and veggies tossed in, with a croquette or miniature pierogi floating in it, or simply as broth in a mug expressly for drinking ('barszcz solo'). A recommended alternative to other beverages with any winter meal, we’d be surprised if you can find a bad cup of barszcz anywhere in Kraków.
+ <div class="container-fluid">
+  <div class ="row">
+   <div class="col-lg-12">	
+ <!-- start collapsed navbar -->
+	  <div class="navbar-header navbar-inverse">
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mine" aria-expanded="false"
+                 style="color:#CCC">
+        Krakow</button>
+    		</div> <!-- /collapsed navbar -->
+    <nav class="navbar navbar-expand-lg navbar-inverse collapse navbar-collapse " id ="mine" style="opacity: 0.8;">
  
-  It doesn’t get any more Polish than <strong>żurek</strong> – a unique sour rye soup with sausage, potatoes and occasionally egg chucked in, and often served in a bread bowl.
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="localdishes.html">Local Dishes</a></li>
+      <li><a href="historicalplaces.html">Historical Places</a></li>
+      <li><a href="usefullinks.html">Useful Links</a></li>
+      <li><a  href="aboutme.html">About Me</a></li>
+      <li><a  href="contactme.html">Contact Me</a></li>
+      <li><a  href="registration.html">Registration</a></li>
+     </ul>
+    <div class="navbar-header  navbar-right" >
+      <a  class="navbar-brand" href="index.html">Krakow </a>
+    </div>
   
- If you’re of strong constitution and feeling truly adventurous, spring for <strong>flaki</strong> – beef tripe soup enriched with veggies, herbs and spices. A hearty standby in most kitchens, we personally save the pleasure for compromising situations involving mother-in-laws, but we still have to give credit to any local restaurant bold enough to keep this on their menu.</p>
-<h3><em> Kotlet Schabowy</em></h3>
-<img src="kotlet_schabowy.jpg" width="427" height="269" alt="kotlet  schabowy" />
-<p>Probably the most popular lunch/supper in Poland is the almighty ‘schabowy’ with mashed potatoes and pickled cabbage, and you can walk into almost restaurant in the country and be assured of its presence on the menu (if the kitchen hasn’t run out of it already). Essentially a breaded and fried pork chop (cutlet), ‘kotlet schabowy’ is quite similar to Viennese schnitzel, and a solid bet for a cheap, filling, risk-free meal. If you’re awoken on a Saturday or Sunday morning by the sound of profuse banging - that’s the collective sound of every housewife in Poland tenderising the meat for this meal with a spiky mallet. So best mind your manners.</p>
+  </nav>
+    </div>
+  </div>
+</div>
+
+<hr/>
+
+
+
+<div class="container-fluid">
+     <div class="col-lg-12" >
+     <span class="navbar-text">
+  <p style="font-size: 20px; background-color: rgba(100, 100, 100, 0.5); font-weight:200;">Here is the local dishes for Krakow &nbsp; &nbsp;</p>
+  </span>
+    </div>
+   
+ 
+     <div class="col-lg-12">
+      <span class="navbar-text">
+     <h3><em>Bigos &nbsp; &nbsp;</em></h3>
+     </span>
+    </div>
+     <div class="col-lg-5"> 
+  <img class="img-thumbnail" src="img/big.jpg" width="427" height="269" alt="img" />
+      </div>
+   <div class="col-lg-7">
+ <nav class="navbar navbar-light bg-light" style="text-align:center;">
+      <span class="navbar-text">
+  <p>Traditionally a winter dish, Bigos is a hearty stew made in large batches. Though there is no standard recipe, ingredients usually include lots of fresh and pickled cabbage, leftover meat parts and sausage, onion, mushrooms, garlic and whatever else is on hand. In fact, metaphorically Bigos translates to ‘big mess,’ ‘confusion’ or ‘trouble’ in Polish. Seasoned with peppercorns, bay leaves, caraway and the kitchen sink, the stew is left to gestate, sometimes underground, for a few days for full flavour infusion. A Polish restaurant or prospective wife can be fairly measured on the strength of their Bigos.</p>
+    </span>
+     </nav>
+ </div> 
+ </div>
+ <br/>
+ <br/>
+ </div>
+ 
+</br>
+ <div class="div-with-bg">
+ <div class="container-fluid">
+     <div class="col-lg-12">
+     <span class="navbar-text">
+  <h3><em>Gołąbki &nbsp; &nbsp;</em></h3>
+  </span>
+  </div>
+   <div class="col-lg-5"> 
+<img class="img-thumbnail" src="img/c.png" width="427" height="269" alt="img" />
+</div>
+<div class="col-lg-7">
+ <nav class="navbar navbar-light bg-light" style="text-align:center;">
+      <span class="navbar-text">
+
+<p>Translating to ‘little pigeons,’ this favourite dish consists of boiled cabbage leaves stuffed with beef, onion and rice before being baked and served in a tomato or mushroom sauce. Polish legend claims King Kazimierz fed his army gołąbki before a battle outside Malbork against the Teutonic Order, and their unlikely subsequent victory has been attributed to the hearty meal ever since.
+</p>
+<br>
+ </span>
+ </nav>
+ </div>
+ </div>
+  </br> </br>
+  </div>
+ 
+ 
+ 
+ </br>
+ 
+
+<div class="div-with-bg">
+ <div class="container-fluid">
+     <div class="col-lg-12">
+      <span class="navbar-text">
+     <h3><em>Pierogi &nbsp; &nbsp;</em></h3>
+     </span>
+     </div>
+     <div class="col-lg-5"> 
+<img class="img-thumbnail" src="img/pierogi.jpg" width="427" height="269" alt="pierogi" />
+</div>
+<div class="col-lg-7">
+ <nav class="navbar navbar-light bg-light" style="text-align:center;">
+      <span class="navbar-text">
+<p>Pierogi arrived on Polish territories in the 13th century. The were probably imported from the Far East via eastern neighbors such as Kievian Rus (today's Ukraine) perhaps thanks to Hyacinth of Poland (a monk in a Kiev monastery who became patron saint of pierogi).  In the past, pierogi were more popular in the eastern borderlands of Old Poland than in the west. The first written pierogi recipes come from Compendium Ferculorum a book published in 1682. It was the first Polish cookbook of the renowned cook Stanisław Czerniecki. What was the stuffing for those ancient pierogi? No potatoes (which were unknown in the 17th century in Poland...) but chopped kidneys, veal fat, greens and nutmeg</p>
+</span>
+  </nav>
+  </div> 
+  </div>
+   </br>
+  </br>
+  </div>
+</br>
+<div class="div-with-bg">
+ <div class="container-fluid">
+     <div class="col-lg-12">
+      <span class="navbar-text">
+<h3><em> Zapiekanka &nbsp; &nbsp;</em></h3>
+</span>
+</div>
+<div class="col-lg-5"> 
+<img class="img-thumbnail"src="img/zapiekanka.jpg" width="427" height="269" alt="zapiekanka" />
+</div>
+<div class="col-lg-7">
+ <nav class="navbar navbar-light bg-light" style="text-align:center;">
+      <span class="navbar-text">
+
+<p>A zapiekanka s an open-face sandwich made of half of a baguette or other long roll of bread, topped with sautéed white mushrooms, cheese and sometimes other ingredients, and toasted until the cheese melts. Served hot with ketchup, it is a popular street food in Poland. With its origin dating back to the 1970s, the zapiekanka is associated with the austere times of Poland's Communist regime, but it has enjoyed renewed demand in the 21st century, which has also brought a wider range of varieties.</p>
+</span>
+    </nav>
+       </div>
+       </div>
+   </br>
+  </br>
+  </div>
+       </br>
+       <div class="div-with-bg">
+ <div class="container-fluid">
+     <div class="col-lg-12">
+      <span class="navbar-text">
+<h3><em> Zupa(Soup) &nbsp; &nbsp;</em></h3>
+</span>
+</div>
+   <div class="col-lg-5">
+ <img class="img-thumbnail"src="img/barszcz.jpg" width="213" height="192" alt="barszcz" />
+ <img class="img-thumbnail" src="img/zurek.jpg" width="250" height="192" alt="zurek" />
+</div>
+<div class="col-lg-7">
+ <nav class="navbar navbar-light bg-light" style="text-align:center;">
+      <span class="navbar-text">
+
+<p>Poland has three signature soups: barszcz, żurek and flaki. A nourishing beetroot soup, <strong>barszcz </strong>may be served with potatoes and veggies tossed in, with a croquette or miniature pierogi floating in it, or simply as broth in a mug expressly for drinking ('barszcz solo'). A recommended alternative to other beverages with any winter meal, we’d be surprised if you can find a bad cup of barszcz anywhere in Kraków.</p>
+ 
+ <p> It doesn’t get any more Polish than <strong>żurek</strong> – a unique sour rye soup with sausage, potatoes and occasionally egg chucked in, and often served in a bread bowl.</p>
+  
+<p> If you’re of strong constitution and feeling truly adventurous, spring for <strong>flaki</strong> – beef tripe soup enriched with veggies, herbs and spices. A hearty standby in most kitchens, we personally save the pleasure for compromising situations involving mother-in-laws, but we still have to give credit to any local restaurant bold enough to keep this on their menu.</p>
+   </span>
+     </nav>
+     </div>
+     </div>
+      
+   </br>
+  </br>
+  </div>
+ </br>
+ <div class="div-with-bg">
+ <div class="container-fluid">
+     <div class="col-lg-12">
+      <span class="navbar-text">
+<h3><em> Kotlet Schabowy &nbsp; &nbsp;</em></h3>
+</span>
+</div>
+<div class="col-lg-5">
+<img class="img-thumbnail" src="img/kotlet_schabowy.jpg" width="427" height="269" alt="kotlet  schabowy" />
+</div>
+<div class="col-lg-7">
+ <nav class="navbar navbar-light bg-light" style="text-align:center;">
+      <span class="navbar-text">
+
+<p >Probably the most popular lunch/supper in Poland is the almighty ‘schabowy’ with mashed potatoes and pickled cabbage, and you can walk into almost restaurant in the country and be assured of its presence on the menu (if the kitchen hasn’t run out of it already). Essentially a breaded and fried pork chop (cutlet), ‘kotlet schabowy’ is quite similar to Viennese schnitzel, and a solid bet for a cheap, filling, risk-free meal. If you’re awoken on a Saturday or Sunday morning by the sound of profuse banging - that’s the collective sound of every housewife in Poland tenderising the meat for this meal with a spiky mallet. So best mind your manners.</p>
+ </span>
+   </nav>
+     </div>
+      </div>
+   </br>
+  </br>
+  </div>
+    </br>
+    </br>
+
+
 </body>
 
 </html>
