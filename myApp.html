@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJs Öğreniyorum</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script>
+    var myApp = angular.module("myapp", []);
+myApp.controller("myCtrl", function ($scope) {
+    $scope.events = [
+        {
+            name: 'Dev Festival',
+            city: 'Eskişehir',
+            date: '10/10/2019'
+        },
+        {
+            name: 'Kitap Okuma',
+            city: 'İzmir',
+            date: '1/12/2018'
+        }
+    ]
+
+    $scope.addItem = function () {
+        if (angular.isDefined($scope.name) && $scope.name != '' && $scope.city != '' && $scope.date != '') {
+            $scope.events.push({ name: $scope.name, city: $scope.city, date: $scope.date });
+
+            $scope.name = ' ';
+            $scope.city = ' ';
+            $scope.date = ' ';
+        }
+        else {
+            alert("Lütfen boşlukları doldurunuz!");
+        }
+
+
+    }
+});
+
+
+
+</script>
+</head>
+
+<body>
+    <h4>Merhaba Hoşgeldiniz!</h4>
+    <div ng-app="myapp" ng-controller="myCtrl">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="active">Festival Adı</th>
+                    <th class="active">Şehir</th>
+                    <th class="active">Tarih</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr ng-repeat="event in events">
+                    <!--events arrayi içindeki event'ler-->
+                    <td>{{event.name}}</td>
+                    <td>{{event.city}}</td>
+                    <td>{{event.date}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/>
+        <br/>
+        <h4>Festival Oluştur</h4>
+
+        <form>
+            <div class="form-group">
+                <label for="text">Festival: </label>
+                <input type="text" ng-model="name" placeholder="Festival adını giriniz" required>
+            </div>
+            <div class="form-group">
+                <label for="city" style="margin-right: 15px">Şehir: </label>
+                <input type="text" ng-model="city" placeholder="Şehri giriniz" required>
+            </div>
+            <div class="form-group">
+                <label for="date" style="margin-right: 15px">Tarih: </label>
+                <input type="text" ng-model="date" placeholder="Tarihi giriniz" required>
+            </div>
+            <button ng-click="addItem()">Ekle</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
