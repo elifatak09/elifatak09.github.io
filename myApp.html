@@ -27,9 +27,9 @@ myApp.controller("myCtrl", function ($scope) {
         if (angular.isDefined($scope.name) && $scope.name != '' && $scope.city != '' && $scope.date != '') {
             $scope.events.push({ name: $scope.name, city: $scope.city, date: $scope.date });
 
-            $scope.name = ' ';
-            $scope.city = ' ';
-            $scope.date = ' ';
+            $scope.name = '';
+            $scope.city = '';
+            $scope.date = '';
         }
         else {
             alert("Lütfen boşlukları doldurunuz!");
