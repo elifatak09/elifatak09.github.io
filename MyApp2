@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJs Öğreniyorum</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script>
+    var myApp = angular.module("myapp", []);
+myApp.controller("myCtrl", function ($scope) {
+    $scope.events = [
+        {
+            name: 'Dev Festival',
+            city: 'Eskişehir',
+            date: '10/10/2019',
+            price: '10'
+        },
+        {
+            name: 'Kitap Okuma',
+            city: 'İzmir',
+            date: '1/12/2018',
+            price: '5'
+        },
+        {
+            name: 'Sadviç Festivali',
+            city: 'İzmir',
+            date: '18/10/2018',
+            price: '10'
+        },
+        {
+            name: 'Kahve Fest',
+            city: 'Ankara',
+            date: '20/08/2018',
+            price: '5'
+        },
+        {
+            name: 'Boya Festivali',
+            city: 'Eskişehir',
+            date: '30/02/2019',
+            price: '15'
+        }
+    ]
+
+});
+
+
+
+</script>
+</head>
+
+<body>
+    <h4>Merhaba Hoşgeldiniz!</h4>
+    <div ng-app="myapp" ng-controller="myCtrl">
+       Ara: <input ng-model="searchText">
+        <br/>
+        <br/>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="active">Festival Adı</th>
+                    <th class="active">Şehir</th>
+                    <th class="active">Tarih</th>
+                    <th class="active">Bilet Ücreti</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr ng-repeat="event in events | filter:searchText">
+                    <!--events arrayi içindeki event'ler-->
+                    <td>{{event.name}}</td>
+                    <td>{{event.city}}</td>
+                    <td>{{event.date}}</td>
+                    <td>{{event.price| currency}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+
+</html>
