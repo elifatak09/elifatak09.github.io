@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJs Öğreniyorum</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js "></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <script>
+        var myApp = angular.module("myapp", []);
+        myApp.controller("myCtrl", function ($scope, $timeout, $interval, $http) {
+            $http.get("http://127.0.0.1:8000/api/fests")
+                .then(function (response) {
+                    console.log(response.data);
+                    $scope.events = response.data;
+                });
+
+            $scope.name = null
+            $scope.city = null;
+            $scope.date = null;
+            $scope.price = null;
+            $scope.cont = null;
+            $scope.addItem = function (name, city, date, price, cont) {
+                var data = {
+                    name: name,
+                    city: city,
+                    date: date,
+                    price: price,
+                    cont: cont
+                };
+
+                $http.post('http://127.0.0.1:8000/api/fests', JSON.stringify(data))
+                    .then(function (response) {
+                        console.log(response.data);
+                        $scope.events.push(response.data);
+                        alert("Festival başarıyla eklendi!")
+                        $scope.name = '';
+                        $scope.city = '';
+                        $scope.date = '';
+                    });
+
+            };
+
+
+
+            $scope.myHeader = "Merhaba Hoşgeldiniz!";
+            $timeout(function () {
+                $scope.myHeader = "Eğlenceli Festivaller Dileriz...";
+            }, 5000);
+
+            $scope.theTime = new Date().toLocaleTimeString();
+            $interval(function () {
+                $scope.theTime = new Date().toLocaleTimeString();
+            }, 1000);
+
+
+
+        });
+
+
+    </script>
+</head>
+
+<body ng-app="myapp" ng-controller="myCtrl">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <h4 style="color: crimson; font-family: 'Merriweather', serif; font-size: 40px;">{{myHeader}}</h4>
+            </div>
+
+            <div class="col-lg-6" style="text-align: right">
+                <h4 style="font-weight: bold;">{{theTime}}</h4>
+            </div>
+
+            <div class="col-lg-12">
+                <h4 style="font-family: 'Merriweather', serif; font-weight: 700; color: darkblue;">Festival Listesi</h4>
+                <div>
+
+                    <label>Kontenjan gizle
+                        <input type="checkbox" ng-model="gizle">
+                    </label>
+
+                    <label>Bilet fiyatı göster
+                        <input type="checkbox" ng-model="gster">
+                    </label>
+
+                    <br/>
+                    <table class="table" style="border: 1px solid black;">
+                        <thead>
+                            <tr>
+                                <th class="active">Festival Adı</th>
+                                <th class="active">Şehir</th>
+                                <th class="active">Tarih</th>
+                                <th class="active" ng-show="gster">Bilet Ücreti</th>
+                                <th class="active" ng-hide="gizle">Kontenjan</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="event in events">
+                                <!--events arrayi içindeki event'ler-->
+                                <td>{{event.name}}</td>
+                                <td>{{event.city}}</td>
+                                <td>{{event.date}}</td>
+                                <td ng-show="gster">{{event.price| currency}}</td>
+                                <td ng-hide="gizle">{{event.cont}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+
+                    <form method="POST">
+                        <h4 style="font-family: 'Merriweather', serif; font-weight: 700; color: darkblue;">Festival Oluştur</h4>
+                        <div class="col-lg-4" style="padding-left: 0px;;">
+
+
+                            <div class="form-group">
+                                <label for="text">Festival: </label>
+                                <input type="text" ng-model="name" placeholder="Festival adını giriniz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city" style="margin-right: 15px">Şehir: </label>
+                                <input type="text" ng-model="city" placeholder="Şehri giriniz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="date" style="margin-right: 15px">Tarih: </label>
+                                <input type="text" ng-model="date" placeholder="Tarihi giriniz" required>
+                            </div>
+                            <button class="btn btn-success btn-sm" value="Send" ng-click="addItem(name,city,date,price,cont)">Ekle</button>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="form-group">
+                                <label for="price" style="margin-right: 15px">Bilet Fiyatı: </label>
+                                <input type="text" ng-model="price" placeholder="Bilet fiyatı giriniz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cont" style="margin-right: 15px">Kontenjan: </label>
+                                <input type="text" ng-model="cont" placeholder="Kontenjan bilgisi giriniz" required>
+                            </div>
+                        </div>
+
+
+
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
